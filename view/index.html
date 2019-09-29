@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8"/>
+<style> 
+div{
+width:350px;
+height:300px;
+margin: 2rem auto;
+border:1px solid black;
+  
+/* Firefox */
+display:-moz-box;
+-moz-box-pack:center;
+-moz-box-align:center;
+-moz-box-orient: vertical;
+
+/* Safari, Chrome, and Opera */
+display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+-webkit-box-orient: vertical;
+/* W3C */
+display:box;
+box-pack:center;
+box-align:center;
+box-orient: vertical;
+}
+
+div.section{counter-reset: section;}
+div.section ul li a{}
+a::before{counter-increment: section;content:'Section' counter(section) '.' }
+ul::before{}
+</style>
+</head>
+<body>
+
+<div class="section">
+    <ul>
+        <li><a>我是居中对齐的。</a>
+            <ul>
+                <li><a>我是居中对齐的。1</a></li>
+                <li><a>我是居中对齐的。1</a></li>
+                <li><a>我是居中对齐的。1</a></li>
+                <li><a>我是居中对齐的。1</a></li>
+                <li><a>我是居中对齐的。1</a></li>
+                <li><a>我是居中对齐的。1</a></li>
+            </ul>
+        </li>
+        <li><a>我是居中对齐的。</a>
+        </li>
+        <li><a>我是居中对齐的。</a></li>
+        <li><a>我是居中对齐的。</a></li>
+        <li><a>我是居中对齐的。</a></li>
+        <li><a>我是居中对齐的。</a></li>
+    </ul>
+</div>
+
+<p><b>注释：</b>IE 不支持 box-pack 和 box-align 属性。</p>
+
+<script type="text/javascript">
+    
+</script>
+
+</body>
+</html>
